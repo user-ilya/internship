@@ -2,11 +2,120 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Настройка области просмотра -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <!-- Ключевые слова для поисковых систем -->
+    <meta name="keywords" content="html sctuct">  
+    <!-- Описание веб-страницы -->
+    <meta name="description" content="lesson №1  learn html">
+    <!-- Автор страницы -->
+    <meta name="author" content="Kuzmin Ilya">
+    <!-- Обновление документа через каждые 30 сек -->
+    <meta http-equiv="refresh" content="30">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <h1>Hello world !!!</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate recusandae harum exercitationem nulla totam architecto vero ullam? Reprehenderit, impedit? Harum placeat veniam aliquid fugit quaerat!</p>
+    <button>Я кнопка</button>
+    <form action="">
+        <label for="about">Имя:</label><br>
+        <input type="text" required id="about" width="100px" height="16px"><br>
+        <br>
+        <input type="password" required placeholder="Введите пароль" width="100px" height="16px"><br>
+        <label for="gender">Ваш пол:</label><br>
+        <input type="radio"  id="male" name="gender" value="Male" checked>Male
+        <input type="radio" id="female"  name="gender" value="Female">Female <br>
+        <label for="subject">Какие предметы вы изучаете:</label><br>
+        <input type="checkbox" name="subject" id="math">Math
+        <input type="checkbox" name="subject" id="Russian">Russian
+        <input type="checkbox" name="subject" id="PI">PI <br>
+        <label for="car__select">Выберите марку автомобиля</label><br>
+        <select id ="car__select">
+            <option id="car__select" value="Bmw">Bmw</option>
+            <option id="car__select" value="Mercedes">Mersedes</option>
+            <option id="car__select" value="Skoda">Skoda</option>
+        </select>
+        <br>
+        <label for="textarea">Расскажите о себе:</label><br>
+        <textarea name="text" id="textarea" cols="30" rows="10"></textarea><br>
+        <input type="tel" name="" id="">
+    </form>
+
+    <fieldset>
+        <legend>О себе</legend>
+        <label for="name">Имя:</label><br>
+        <input type="text" required id="name"><br>
+        <label for="surname">Фамилия:</label><br>
+        <input type="text" required id="surname"><br>
+        <label for="gender">Ваш пол:</label><br>
+        <input type="radio"  id="male" name="gender" value="Male" checked>Male
+        <input type="radio" id="female"  name="gender" value="Female">Female <br>
+        <input type="submit" value="Отправить">
+        <input type="reset" value="Очистить">
+    </fieldset>
+
+    <a href="#">
+        <img src="https://proza.ru/pics/2020/08/01/639.jpg" alt="Kuzya" width="250px" height="250px">
+    </a>
+
+    <!-- Таблица -->
+    <table>
+        <tr>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Возраст</th>
+        </tr>
+        <tr>
+            <td>Илья</td>
+            <td>Петр</td>
+            <td>Павел</td>
+        </tr>
+        <tr>
+            <td>Кузьмин</td>
+            <td>Пупкин</td>
+            <td>Шапкин</td>
+        </tr>
+        <tr>
+            <td>19</td>
+            <td>1</td>
+            <td>90</td>
+        </tr>
+    </table>
+
+    <!-- Списки -->
+
+    <ul>
+        <li>
+            1
+            <ul>
+                <li>a</li>
+                <li>b
+                    <ul>
+                        <li>abc</li>
+                        <li>bca</li>
+                        <li>bac</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            2
+        </li>
+        <li>
+            3
+        </li>
+    </ul>
+
+
+    <ol>
+        <li>Первый</li>
+        <li>Второй</li>
+        <li>Третий</li>
+    </ol>
+
+
+
 </body>
 </html>
