@@ -1,62 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <base href="#">
+    <meta charset="UTF-8"/>
     <!-- Настройка области просмотра -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Ключевые слова для поисковых систем -->
-    <meta name="keywords" content="html sctuct">  
+    <meta name="keywords" content="html sctuct"/>  
     <!-- Описание веб-страницы -->
-    <meta name="description" content="lesson №1  learn html">
+    <meta name="description" content="lesson №1  learn html"/>
     <!-- Автор страницы -->
-    <meta name="author" content="Kuzmin Ilya">
+    <meta name="author" content="Kuzmin Ilya"/>
     <!-- Обновление документа через каждые 30 сек -->
-    <meta http-equiv="refresh" content="30">
+    <meta http-equiv="refresh" content="30"/>
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <h1>Hello world !!!</h1>
-    <h2>My name is <span>Ilya Kuzmin</span></h2>
-    <p>Lorem, ipsum dolor sit amet consectetur <mark>adipisicing elit.</mark> Cupiditate recusandae harum exercitationem nulla totam architecto vero ullam? Reprehenderit, impedit? Harum placeat veniam aliquid fugit quaerat!</p>
+    <header>
+        <h1>Hello world !!!</h1>
+        <h2>My name is <span>Ilya Kuzmin</span></h2>
+    </header>
+    <main>
+        <p>Lorem, ipsum dolor sit amet consectetur <mark>adipisicing elit.</mark> Cupiditate recusandae harum exercitationem nulla totam architecto vero ullam? Reprehenderit, impedit? Harum placeat veniam aliquid fugit quaerat!</p>
     <button>Я кнопка</button>
     <form action="">
-        <label for="about">Имя:</label><br>
-        <input type="text" required id="about" width="100px" height="16px"><br>
-        <br>
-        <input type="password" required placeholder="Введите пароль" width="100px" height="16px"><br>
+        <label for="about">Имя:</label>
+        <br/>
+        <input type="text" required id="about" width="100px" height="16px"/>
+        <br/>
+        <input type="password" required placeholder="Введите пароль" width="100px" height="16px">
+        <br/>
         <p>Выберите пол:</p>
-        <input type="radio"  id="male" name="gender" value="Male" checked><label for="male">Male</label>
-        <input type="radio" id="female"  name="gender" value="Female"><label for="female">Female</label>
+        <input type="radio"  id="male" name="gender" value="Male" checked/><label for="male">Male</label>
+        <input type="radio" id="female"  name="gender" value="Female"/><label for="female">Female</label>
         <p>Какие предметы вы изучаете ?</p>
-        <input type="checkbox" id="math"><label for="math">Math</label>
-        <input type="checkbox" id="Russian"><label for="Russian">Russian</label>
-        <input type="checkbox" id="PI"><label for="PI">PI</label> 
-        <br>
+        <input type="checkbox" id="math"/><label for="math">Math</label>
+        <input type="checkbox" id="Russian"/><label for="Russian">Russian</label>
+        <input type="checkbox" id="PI"/><label for="PI">PI</label> 
+        <br/>
+        <input type="range" id="range"/>
+        <br/>
         <label for="car__select">Выберите марку автомобиля</label><br>
-        <select id ="car__select">
+        <select id ="car__select" >
             <option  value="Bmw">Bmw</option>
             <option  value="Mercedes">Mersedes</option>
             <option  value="Skoda">Skoda</option>
         </select>
-        <br>
+        <br/>
         <label for="area">Расскажите о себе:</label><br>
-        <textarea name="text" id="area" cols="30" rows="10"></textarea><br>
-        <input type="tel" name="" id="">
+        <textarea name="text" id="area" cols="30" rows="10"></textarea>
+        <br/>
     </form>
 
     <fieldset>
         <legend>О себе</legend>
-        <label for="name">Имя:</label><br>
-        <input type="text" required id="name"><br>
-        <label for="surname">Фамилия:</label><br>
-        <input type="text" required id="surname"><br>
+        <label for="name">Имя:</label>
+        <br/>
+        <input type="text" required id="name">
+        <br/>
+        <label for="surname">Фамилия:</label>
+        <br/>
+        <input type="text" required id="surname">
+        <br/>
         <p>Выберите пол:</p>
-        <input type="radio"  id="male" name="gender" value="Male" checked><label for="male">Male</label>
-        <input type="radio" id="female"  name="gender" value="Female"><label for="female">Female</label>
-        <br>
-        <input type="submit" value="Отправить">
-        <input type="reset" value="Очистить">
+        <input type="radio"  id="male" name="gender" value="Male" checked/><label for="male">Male</label>
+        <input type="radio" id="female"  name="gender" value="Female"/><label for="female">Female</label>
+        <br/>
+        <input type="submit" value="Отправить"/>
+        <input type="reset" value="Очистить"/>
+        <input type="password" placeholder="Введите пароль"/>
+        <input type="email" name="email"/>
+        <hr/>
+        <input type="date" name="date time">
+        <hr/>
+        <label for="file">Прикрепите ваш документ</label>
+        <br/>
+        <input type="file" id="file"/>
     </fieldset>
 
     <a href="#">
@@ -66,58 +86,61 @@
     <!-- Таблица -->
     <table>
         <tr>
-            <th>Имя</th>
-            <th>Фамилия</th>
-            <th>Возраст</th>
+            <thead>Имя</thead>
+            <thead>Фамилия</thead>
+            <thead>Возраст</thead>
         </tr>
         <tr>
-            <td>Илья</td>
-            <td>Кузьмин</td>
-            <td>19</td>
+            <tbody>Илья</tbody>
+            <tbody>Кузьмин</tbody>
+            <tbody>19</tbody>
         </tr>
         <tr>
-            <td>Павел</td>
-            <td>Пупкин</td>
-            <td>23</td>
+            <tbody>Павел</tbody>
+            <tbody>Пупкин</tbody>
+            <tbody>23</tbody>
         </tr>
         <tr>
-            <td>Домовенок</td>
-            <td>Кузя</td>
-            <td>5</td>
+            <tbody>Домовенок</tbody>
+            <tbody>Кузя</tbody>
+            <tbody>5</tbody>
         </tr>
     </table>
+    </main>
 
     <!-- Списки -->
 
-   <div>
-        <ul>
-            <li>
-                1
-                <ul>
-                    <li>a</li>
-                    <li>b
-                        <ul>
-                            <li>abc</li>
-                            <li>bca</li>
-                            <li>bac</li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                2
-            </li>
-            <li>
-                3
-            </li>
-        </ul>
-   </div>
-
-
-    <ol>
-        <li>Первый</li>
-        <li>Второй</li>
-        <li>Третий</li>
-    </ol>
+    <footer>
+        <div>
+            <ul>
+                <li>
+                    1
+                    <ul>
+                        <li>a</li>
+                        <li>b
+                            <ul>
+                                <li>abc</li>
+                                <li>bca</li>
+                                <li>bac</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    2
+                </li>
+                <li>
+                    3
+                </li>
+            </ul>
+       </div>
+    
+    
+        <ol>
+            <li>Первый</li>
+            <li>Второй</li>
+            <li>Третий</li>
+        </ol>
+    </footer>
 </body>
 </html>
