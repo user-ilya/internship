@@ -7,10 +7,10 @@
 
 body{
     position: relative;
-    background-color: cornsilk;
+    background-color: #fff8dc;
 }
 .container{
-    width: 1920px;
+    width: 1440px;
     padding-top: 50px;
     margin: 0 auto;
 }
@@ -20,7 +20,7 @@ h1, h2 {
 }
 
 span {
-    color: brown;
+    color: #a52a2a;
     font-weight: bold;
     font-style: italic;
 }
@@ -28,9 +28,10 @@ span {
 p {
     margin-top: 10px;
     font-size: 20px;
+    user-select: none;
 }
 .text::first-letter{
-    color: brown;
+    color: #a52a2a;
     font-size: 42px;
 }
 
@@ -38,16 +39,15 @@ p {
     display: block;
     padding: 15px;
     margin: 20px auto;
-    border: 1px solid brown;
+    border: 1px solid #a52a2a;
     border-radius: 5px;
     font-size: 24px;
     outline: none;
     transition: 0.4s all;
     cursor: pointer;
-    
 }
 .button__main:hover{
-    box-shadow: 2px 2px 3px 2px brown;
+    box-shadow: 2px 2px 3px 2px #a52a2a;
 }
 .button__main-mod {
     position: fixed;
@@ -84,7 +84,7 @@ input[type = "password"] {
 
 input[type = "reset"] {
     width: 100px;
-    border: 1px solid brown;
+    border: 1px solid #a52a2a;
     border-radius: 5px;
     padding: 7px;
     outline: none;
@@ -94,7 +94,7 @@ input[type = "reset"] {
 
 input[type = "submit"] {
     width: 100px;
-    border: 1px solid black;
+    border: 1px solid #000000;
     border-radius: 5px;
     padding: 7px;
     outline: none;
@@ -103,24 +103,24 @@ input[type = "submit"] {
 }
 
 input[type = "reset"]:hover {
-    background-color: brown;
+    background-color: #a52a2a;
     color: #fff;
     cursor: pointer;
 }
 
 input[type = "submit"]:hover{
-    background-color: black;
+    background-color: #000000;
     color: #fff;
 }
 
 input[type = "email"] {
-    border: 1px solid black;
-    box-shadow: 1px 1px 1px rgb(114, 114, 114);
+    border: 1px solid #000000;
+    box-shadow: 1px 1px 1px #727272;
 }
 input[type = "date"] {
     margin-top: 8px;
-    border: 1px solid black;
-    box-shadow: 1px 1px 1px rgb(114, 114, 114);
+    border: 1px solid #000000;
+    box-shadow: 1px 1px 1px #727272;
 }
 
 
@@ -173,7 +173,7 @@ select, option {
     padding: 10px;
 }
 option:hover {
-    background-color: rgb(252, 221, 96);
+    background-color: #fcdd60;
 } 
 input[type = "range"] {
     cursor: pointer;
@@ -194,9 +194,9 @@ fieldset {
 legend {
     margin-left: 40px;
     font-size: 24px;
-    color: brown;
+    color: #a52a2a;
     line-height: 24px;
-    border: 1px solid black;
+    border: 1px solid #000;
     border-radius: 10%;
     padding: 10px;
 }
@@ -212,7 +212,7 @@ legend {
 
 
 td, table{
-    border: 1px solid black;
+    border: 1px solid #000;
     padding: 10px;
     border-collapse: collapse;
     font-size: 16px;
@@ -227,7 +227,7 @@ td, table{
     margin: 15px 0;
     text-decoration: none;
     cursor: pointer;
-    color: black;
+    color: #000;
 }
 #link:hover {
     text-decoration: underline;
@@ -254,6 +254,5 @@ li {
 
 ol li { 
     list-style-type: lower-latin;
-    
 }
 
