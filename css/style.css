@@ -6,11 +6,15 @@
     margin: 0;
     padding: 0;
 }
+body{
+    background-color: #fff8dc;
+}
 
 .container{
-    width: 1440px;
-    padding-top: 50px;
-    margin: 0 auto;
+    border: 1px solid #0000ff;
+    display: flex;
+    width: 100%;
+    height: 100%;
 }
 
 h1, h2 {
@@ -200,7 +204,9 @@ legend {
     border-radius: 10%;
     padding: 10px;
 }
-
+#image{
+    width: 100px;
+}
 img {
     display: block;
     width: 100%;
@@ -255,11 +261,68 @@ li {
 ol li { 
     list-style-type: lower-latin;
 }
- /* table layout  
-.table__layout{
+.block__1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: flex-start;
+    width: 66%;
+    height: 100%;
+    border: 1px solid #ff0000;
+
+}
+#header{
+    align-self: flex-start;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+.block__4{
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid chartreuse;
+    align-items: center;
+}
+.block__5, .block__6 , .block__7{
+    margin: 40px 0;
+    width: 100px;
+    border: 1px solid gray;
+    text-align: center;
+    
+} 
+.block__5{
+    margin-top: 0;
+}
+.block__7{
+    margin-bottom: 0;
+}
+.block__3{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    border: 1px solid #ffa500;
+    margin-left: 40px;
+}
+.block__2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34%;
+    border:1px solid #008000;
+}
+.block__add{
+    display: flex;
+    
+}
+
+
+
+
+
+ 
+/* .table__layout{
     width: 100%;
-    height: 100vh;
-    table-layout: fixed;
+    height: 100%;
     border:1px solid red;
     border-spacing: 40px;
     font-size: 16px;
@@ -270,9 +333,7 @@ th, td {
     padding: 10px;
     vertical-align: top;
 }
-.strench{
-    height: 100%;
-}
+
 .w-100{
     width: 100px;
     padding: 10px;
@@ -286,55 +347,3 @@ img {
 .w-2x{
     width: 66%;
 } */
-
-
-body{
-    display: grid;
-    grid-template-areas: 
-        "header header form"
-        "image form_2 form"
-        "link form_2 form"
-        "footer form_2 form";
-    grid-template-columns: 100px minmax(100px, auto)  minmax(100px, auto) ;
-    grid-template-rows: repeat(4, minmax(100px, auto));
-    grid-auto-columns:  100px minmax(100px, auto)  minmax(100px, auto);
-    grid-auto-rows: repeat(4, minmax(100px, auto));
-    gap: 40px;
-    background-color: #fff8dc;
-    height: 100%;
-    margin: 0 auto;
-    transition: 0.8s all;
-}
-
-#header{
-    grid-area: header;
-    margin: auto;
-}
-#form{
-    grid-area: form;
-    height: 100%;
-    padding-top: 25%;
-    padding-left: 25%; 
-}
-#form_2{
-    grid-area: form_2;
-    margin: 10% auto;
-}
-#image{
-    grid-area: image;
-    height: 100%;
-    
-
-}
-#link{
-    grid-area: link;
-    
-}
-#footer{
-    grid-area: footer;
-   
-}
-#footer, #link, #image{
-    width: 100px;
-    
-}
