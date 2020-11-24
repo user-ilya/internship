@@ -4,16 +4,7 @@
         flex-wrap: wrap;
         transition: 1s all;
     }
-    .wrapper{
-        display: block;
-        position: relative;
-        width: 100%;
-        height: 600px;
-
-    }
     .container > .block__2{
-        top: 0;
-        position: fixed;
         margin: 0 auto;
         height: 600px;
         width: 100%;
