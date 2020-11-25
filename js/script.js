@@ -18,8 +18,8 @@ alert(`Привет,${myName}!`);
     });
     
 // конкатенация 
-console.log(typeof(+"string"));
-console.log(typeof(!!4));
+console.log(typeof("string" + (+"7")));
+console.log(typeof("string" + true));
 
 
 function sumNumbers (a,b) {
@@ -42,3 +42,4 @@ try {
 }
 // экранирование 
 alert( "Глава 5.1".match(/\d\.\d/) );
+alert(`Вставка элемента \${}\ - отменяется`);
