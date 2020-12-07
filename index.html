@@ -211,43 +211,7 @@
             </footer>
             <script src="js/script.js"></script>
             <script>
-                const mainText = document.querySelector("h1"),
-                      footerBlock = document.querySelectorAll(".footer__block"),
-                      inputMark = document.querySelectorAll("input"),
-                      linkDef = document.querySelector("#link"),
-                      inputFocus = () => { 
-                          inputMark.forEach((item) => {
-                            item.style.backgroundColor = "#ffe1e1";
-                            item.style.borderRadius = "5px";
-                          });
 
-                };
-                
-                mainText.innerText = "Добро пожаловать";
-
-            footerBlock.forEach( (item,i) => {
-                item.addEventListener('mouseover', function () {
-                    item.style.background = "#ff0000";
-                });
-                item.addEventListener("mouseout", function () {
-                    item.style.background = "transparent"; 
-                });
-                item.addEventListener("click", () => {
-                    item.textContent = `Я блок №${i + 1}`;
-                    item.style.cssText = "line-height:100px; text-align: center;";
-                });
-            });
-
-            inputMark.forEach((item) => {
-                item.addEventListener('focus', inputFocus);
-                item.addEventListener("blur" , () => {
-                    item.style.backgroundColor = "transparent";
-                });
-            });
-
-            linkDef.addEventListener('click', (link) => {
-             link.preventDefault(console.log("Действие по умолчанию отключено"));   
-            });
             </script>
 </body>
 
