@@ -154,16 +154,26 @@ class Car {
        this.body = body;
        this.prace = prace;
     }
+
+    voice () {
+        console.log("Вы завели машину");
+    }
 }
 
 class Bmw extends Car {
     constructor(brand, engine, body, prace) {
-        super();
+        super(engine, body, prace);
         console.log(`Автомобиль марки ${brand} имееет двигатель объемом ${engine} л, кузов ${body} и его цена ${prace}$`);
+    }
+    launch() {
+        carGo.voice();
+        console.log("Дави на газ!");
     }
     
 }
 
-new Bmw("BMW",3.0,"sport",5000000);
+const carGo = new Bmw("BMW",3.0,"sport",5000000);
+carGo.launch();
+
 
  
