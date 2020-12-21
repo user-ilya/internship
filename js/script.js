@@ -38,8 +38,9 @@ function sumNumbers(a, b) {
     return a + b;
 }
 try {
-    btn.addEventListener("mouseover", () => {
+    btn.addEventListener("click", () => {
         console.log(sumNumbers(4, 6));
+        sessionStorage.clear();
     });
 } catch (error) {
     console.log(error.name);
@@ -80,14 +81,15 @@ inputMark.forEach((item) => {
     });
 });
 
-linkDef.addEventListener('click', (link) => {
+/* linkDef.addEventListener('click', (link) => {
     link.preventDefault(console.log("Действие по умолчанию отключено"));
-});
+}); */
 
 
 // Arrow function 
+let sumElems;
 let mas = [1, 5, 8, 10, 4, 2];
-    numberOne = mas[3];
+let  numberOne = mas[3];
     console.info(numberOne);
     console.log(mas.lastIndexOf(10));
     mas.sort();
@@ -96,7 +98,7 @@ let mas = [1, 5, 8, 10, 4, 2];
             console.log(`${i + 1} элемент в массиве со значением ${value}`);
 
         } 
-    sumElems = mas.reduce((value, start) => {return start + value});
+  sumElems = mas.reduce((value, start) => {return start + value});
     console.log(sumElems);
     }); 
 
@@ -175,5 +177,19 @@ class Bmw extends Car {
 const carGo = new Bmw("BMW",3.0,"sport",5000000);
 carGo.launch();
 
+const url = window.location.href; 
+alert(url);
 
- 
+
+history.pushState("Дублирование" ,null, "http://127.0.0.1:5500/internship/#");
+console.log(window.history.state);
+
+localStorage.setItem("name", "Ilya");
+console.log(localStorage.getItem("name"));
+
+sessionStorage.setItem("password", "12345");
+
+// Cookies 
+document.cookie = "user = ilya"; "domain = 127.0.0.1"; "path=/";
+
+
