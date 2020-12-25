@@ -195,24 +195,24 @@ document.cookie = "user = ilya"; "domain = 127.0.0.1"; "path=/";
 
 // Promise 
 
-    const prom = new Promise (async function (resolve, reject) {
+    const prom = new Promise ( function (resolve, reject) {
         setTimeout(() => {
             console.log("Подготовка данных...");
             const product = {
                 type: "fruct",
                 name: "pear"
             }
-            await resolve(product); 
+             resolve(product); 
         }, 2000);
     });
 
     prom.then((product) => {
-        return new Promise((resolve, reject) => {
+        return  new Promise((resolve, reject) => {
             setTimeout(() => {
                 product.status = "order";
                 console.log("Данные получены...");
-                await resolve(product);
-              // await reject();
+                resolve(product);
+              //  reject();
             },2000);
             
         });
@@ -242,6 +242,26 @@ document.cookie = "user = ilya"; "domain = 127.0.0.1"; "path=/";
         console.error("Что-то пошло не так");
     });
 
+    const showCar = async function () {
+       return await new Promise ( (resolve, reject) => {
+            console.log("Ваш автомобиль");
+            setTimeout( () => {
+                const car = {
+                    name: "Lada", 
+                    model: "Priora"
+                }
+                
+                resolve(car);
+                reject();
+            },2000 );
+        }).then((car) => {
+            console.log(car);
+        }).catch(() => {
+            console.log("Ваш автомобиль не найден");
+        }); 
+    } 
+
+    showCar();
 
 
 
