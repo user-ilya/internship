@@ -181,7 +181,7 @@ const url = window.location.href;
 alert(url);
 
 
-history.pushState("Дублирование" ,null, "http://127.0.0.1:5500/internship/#");
+//history.pushState("Дублирование" ,null, "http://127.0.0.1:5500/internship/#");
 console.log(window.history.state);
 
 localStorage.setItem("name", "Ilya");
@@ -191,5 +191,57 @@ sessionStorage.setItem("password", "12345");
 
 // Cookies 
 document.cookie = "user = ilya"; "domain = 127.0.0.1"; "path=/";
+
+
+// Promise 
+
+    const prom = new Promise (async function (resolve, reject) {
+        setTimeout(() => {
+            console.log("Подготовка данных...");
+            const product = {
+                type: "fruct",
+                name: "pear"
+            }
+            await resolve(product); 
+        }, 2000);
+    });
+
+    prom.then((product) => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                product.status = "order";
+                console.log("Данные получены...");
+                await resolve(product);
+              // await reject();
+            },2000);
+            
+        });
+    }).then((data) => {
+        console.log(data);
+    }).catch(() => {
+        console.error("Произошла ошибка")
+    }).finally(() => {
+        console.log("Всего хорошего");
+    });
+
+    // fetch
+    fetch('https://jsonplaceholder.typicode.com/todos/1') // url, на который посылаем запрос 
+    .then(response => response.json())
+    .then(json => console.log(json))
+    
+    fetch("https://jsonplaceholder.typicode.com/post12321s", {
+        method: "POST",
+        body: JSON.stringify({names: "Men"}), 
+        headers: {
+            "Content-type" : "application/json"
+        }
+    })
+    .then((response) => response.json())
+    .then((json) => console.log(json))
+    .catch(() => {
+        console.error("Что-то пошло не так");
+    });
+
+
 
 
