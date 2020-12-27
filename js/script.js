@@ -156,10 +156,10 @@ class Car {
        this.body = body;
        this.prace = prace;
     }
-
-    voice () {
-        console.log("Вы завели машину");
+    launch() {
+        console.log("Ваша машина завелась");
     }
+
 }
 
 class Bmw extends Car {
@@ -168,14 +168,16 @@ class Bmw extends Car {
         console.log(`Автомобиль марки ${brand} имееет двигатель объемом ${engine} л, кузов ${body} и его цена ${prace}$`);
     }
     launch() {
-        carGo.voice();
-        console.log("Дави на газ!");
+        super.launch();
+        console.log("Врум-Врум");
     }
     
 }
 
 const carGo = new Bmw("BMW",3.0,"sport",5000000);
 carGo.launch();
+
+// internship 6
 
 const url = window.location.href; 
 alert(url);
@@ -190,78 +192,32 @@ console.log(localStorage.getItem("name"));
 sessionStorage.setItem("password", "12345");
 
 // Cookies 
-document.cookie = "user = ilya"; "domain = 127.0.0.1"; "path=/";
+document.cookie = "user = ilya; domain = 127.0.0.1; path=/";
 
-
+// internship 7
 // Promise 
 
-    const prom = new Promise ( function (resolve, reject) {
-        setTimeout(() => {
-            console.log("Подготовка данных...");
-            const product = {
-                type: "fruct",
-                name: "pear"
-            }
-             resolve(product); 
-        }, 2000);
-    });
-
-    prom.then((product) => {
-        return  new Promise((resolve, reject) => {
-            setTimeout(() => {
-                product.status = "order";
-                console.log("Данные получены...");
-                resolve(product);
-              //  reject();
-            },2000);
-            
-        });
-    }).then((data) => {
-        console.log(data);
-    }).catch(() => {
-        console.error("Произошла ошибка")
-    }).finally(() => {
-        console.log("Всего хорошего");
-    });
-
-    // fetch
-    fetch('https://jsonplaceholder.typicode.com/todos/1') // url, на который посылаем запрос 
-    .then(response => response.json())
-    .then(json => console.log(json))
     
-    fetch("https://jsonplaceholder.typicode.com/post12321s", {
-        method: "POST",
-        body: JSON.stringify({names: "Men"}), 
-        headers: {
-            "Content-type" : "application/json"
-        }
-    })
-    .then((response) => response.json())
-    .then((json) => console.log(json))
-    .catch(() => {
-        console.error("Что-то пошло не так");
-    });
+    // fetch
 
-    const showCar = async function () {
-       return await new Promise ( (resolve, reject) => {
-            console.log("Ваш автомобиль");
-            setTimeout( () => {
-                const car = {
-                    name: "Lada", 
-                    model: "Priora"
-                }
-                
-                resolve(car);
-                reject();
-            },2000 );
-        }).then((car) => {
-            console.log(car);
-        }).catch(() => {
-            console.log("Ваш автомобиль не найден");
-        }); 
+    
+
+    async function resolved () {
+        return await fetch('https://api.github.com/users/user-ilya/repos') // url, на который посылаем запрос 
+        .then(response => response.json())
+        .then(json =>  console.log(json))
+        .catch(() => {
+            alert(Error.name);
+        })
     } 
+    resolved()
 
-    showCar();
-
-
-
+    const promise =  new Promise ((resolve, reject) => {
+        
+        console.log("Получение данных ...");
+        const fetchArr = fetch('https://api.github.com/users/user-ilya/repos1111')
+        resolve(fetchArr); // url, на который посылаем запрос 
+    });
+    
+    promise.then(response => response.json(fetchArr))
+    .then(json =>  console.log(json), () => console.log(Error.name));
