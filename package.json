@@ -1,0 +1,19 @@
+{
+  "name": "internship",
+  "version": "1.0.0",
+  "description": "internship senla",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/user-ilya/internship.git"
+  },
+  "author": "Ilya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/user-ilya/internship/issues"
+  },
+  "homepage": "https://github.com/user-ilya/internship#readme"
+}

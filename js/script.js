@@ -193,3 +193,7 @@ sessionStorage.setItem("password", "12345");
 document.cookie = "user = ilya"; "domain = 127.0.0.1"; "path=/";
 
 
+
+
+// internship 8 
+
