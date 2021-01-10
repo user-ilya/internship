@@ -1,4 +1,9 @@
-"use strict"
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/*!**********************!*\
+  !*** ./js/script.js ***!
+  \**********************/
+
 
 const myName = prompt("Введите ваше имя", ""),
     age = prompt("Введите ваш возраст", ""),
@@ -221,3 +226,7 @@ document.cookie = "user = ilya; domain = 127.0.0.1; path=/";
     
     promise.then(response => response.json(fetchArr))
     .then(json =>  console.log(json), () => console.log(Error.name));
+
+/******/ })()
+;
+//# sourceMappingURL=bundle.js.map
