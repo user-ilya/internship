@@ -1,0 +1,9 @@
+h1, h2 {
+    text-align: center;
+}
+
+span {
+    color: #a52a2a;
+    font-weight: bold;
+    font-style: italic;
+}

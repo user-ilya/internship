@@ -1,0 +1,14 @@
+fieldset {
+    border-radius: 6px;
+    height: max-content;
+}
+
+legend {
+    margin-left: 40px;
+    font-size: 24px;
+    color: #a52a2a;
+    line-height: 24px;
+    border: 1px solid #000;
+    border-radius: 10%;
+    padding: 10px;
+}

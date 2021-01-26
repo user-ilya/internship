@@ -220,4 +220,7 @@ document.cookie = "user = ilya; domain = 127.0.0.1; path=/";
     });
     
     promise.then(response => response.json(fetchArr))
-    .then(json =>  console.log(json), () => console.log(Error.name));
+    .then(json =>  console.log(json),
+     () => console.log(Error.name));
+
+alert("<script></script>");
