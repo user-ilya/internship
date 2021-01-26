@@ -1,7 +1,11 @@
 {
   "name": "internship",
   "version": "1.0.0",
+<<<<<<< HEAD
   "description": "",
+=======
+  "description": "internship senla",
+>>>>>>> origin/master
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,11 +14,16 @@
     "type": "git",
     "url": "git+https://github.com/user-ilya/internship.git"
   },
+<<<<<<< HEAD
   "author": "",
+=======
+  "author": "Ilya",
+>>>>>>> origin/master
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/user-ilya/internship/issues"
   },
+<<<<<<< HEAD
   "homepage": "https://github.com/user-ilya/internship#readme",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.13.0",
@@ -22,4 +31,7 @@
     "eslint": "^7.17.0",
     "eslint-plugin-react": "^7.22.0"
   }
+=======
+  "homepage": "https://github.com/user-ilya/internship#readme"
+>>>>>>> origin/master
 }
