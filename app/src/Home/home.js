@@ -4,11 +4,13 @@ import Form from '../form/form';
 import Header from '../header';
 import Nav from '../Navigation';
 export default function Home () {
+
+
     return (
         <>
-            <h1>Welcome to Home</h1>
             <Nav/>
-            <Header name='Ilya'/>
+            <h1>Welcome to Home</h1>
+            <Header />
             <Form />
             <ButtonMain/>
         </>
